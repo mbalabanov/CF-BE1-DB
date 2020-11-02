@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2020-11-02T14:54:29.017Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Edg/86.0.622.58" etag="yBgwIkKhHtBPUvpzcNmN" version="13.8.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-02T14:56:27.240Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Edg/86.0.622.58" etag="jVw2Z4KNXNu33jR-wlm3" version="13.8.8" type="github">
   <diagram id="lw3_j7wf6DfLCtdXSwcF" name="Page-1">
     <mxGraphModel dx="865" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Iun290k_lVxxDhx0A3k4-22" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="2490" width="1510" height="440" as="geometry" />
+        </mxCell>
         <mxCell id="b3z_TrKQlpET2KXninBQ-1" value="Step 1: Defining Requirements" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="60" y="160" width="270" height="20" as="geometry" />
         </mxCell>
@@ -400,17 +403,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="XtWSDQYsiJZWP_boM4zA-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.014;entryY=0.186;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=none;endFill=0;fontSize=16;" parent="1" target="XtWSDQYsiJZWP_boM4zA-56" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="200" y="2790" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="220" y="2790" />
-              <mxPoint x="220" y="2840" />
-              <mxPoint x="390" y="2840" />
-              <mxPoint x="390" y="2796" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="XtWSDQYsiJZWP_boM4zA-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.994;entryY=0.071;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=none;endFill=0;fontSize=16;" parent="1" source="XtWSDQYsiJZWP_boM4zA-36" target="XtWSDQYsiJZWP_boM4zA-56" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -496,10 +488,10 @@
           <mxGeometry x="519" y="2850" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="XtWSDQYsiJZWP_boM4zA-83" value="Combined &quot;reader&quot; and &quot;author&quot; to &quot;person&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="80" y="2470" width="390" height="20" as="geometry" />
+          <mxGeometry x="80" y="2460" width="390" height="20" as="geometry" />
         </mxCell>
         <mxCell id="XtWSDQYsiJZWP_boM4zA-84" value="Person" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="99" y="2570" width="240" height="220" as="geometry" />
+          <mxGeometry x="99" y="2570" width="240" height="190" as="geometry" />
         </mxCell>
         <mxCell id="XtWSDQYsiJZWP_boM4zA-85" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="XtWSDQYsiJZWP_boM4zA-84" vertex="1">
           <mxGeometry y="30" width="240" height="30" as="geometry" />
@@ -678,6 +670,15 @@
         </mxCell>
         <mxCell id="Iun290k_lVxxDhx0A3k4-19" value="Creditline in the book can have multiple&#xa;authors, editors, illustrators, etc." style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=center;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
           <mxGeometry x="1290" y="2543" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Iun290k_lVxxDhx0A3k4-20" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="XtWSDQYsiJZWP_boM4zA-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="2745" as="sourcePoint" />
+            <mxPoint x="470" y="2670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Iun290k_lVxxDhx0A3k4-21" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="2630" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
