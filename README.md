@@ -168,3 +168,14 @@ INNER JOIN airport AS a1
 ON a1.airport_id = f.fk_origin_airport_id
 ORDER BY flight_date
 ```
+
+### Arrivals Table
+```
+SELECT flight_date, registration_number, model, airport_name
+FROM plane as p
+INNER JOIN flight AS f
+ON f.fk_plane_id = p.plane_id
+INNER JOIN airport AS a1
+ON a1.airport_id = f.fk_destination_airport_id
+ORDER BY flight_date
+```
