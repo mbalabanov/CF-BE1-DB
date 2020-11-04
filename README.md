@@ -148,6 +148,7 @@ INNER JOIN flight
 ON fk_pilot_id = pilot_id
 ORDER BY flight_date
 ```
+#### Screenshot of Result
 ![Pilot Time Table](db-airline/pilots.png)
 
 ### 3.2 Time Table for Planes
@@ -158,6 +159,7 @@ INNER JOIN flight
 ON fk_plane_id = plane_id
 ORDER BY flight_date
 ```
+#### Screenshot of Result
 ![Scheduled Planes](db-airline/used-planes.png)
 
 ### 3.3 Unused Planes
@@ -167,6 +169,7 @@ FROM plane
 LEFT JOIN flight
 ON fk_plane_id = NULL
 ```
+#### Screenshot of Result
 ![Unused Planes](db-airline/unused-planes.png)
 
 ### 3.4 Origins Table (for Arrivals)
@@ -179,6 +182,7 @@ INNER JOIN airport AS a1
 ON a1.airport_id = f.fk_origin_airport_id
 ORDER BY flight_date
 ```
+#### Screenshot of Result
 ![Origins Table (for Arrivals)](db-airline/arivals.png)
 
 ### 3.5 Destinations Table (for Departures)
@@ -191,6 +195,7 @@ INNER JOIN airport AS a1
 ON a1.airport_id = f.fk_destination_airport_id
 ORDER BY flight_date
 ```
+#### Screenshot of Result
 ![Destinations Table (for Departures)](db-airline/departures.png)
 
 ### 3.6 Departures and their Destinations
@@ -205,4 +210,5 @@ INNER JOIN airport AS d
 ON f.fk_destination_airport_id = d.airport_id
 ORDER BY flight_date
 ```
+#### Screenshot of Result
 ![Departures and their Destinations](db-airline/origin-destination.png)
