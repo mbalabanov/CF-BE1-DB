@@ -152,7 +152,7 @@ ORDER BY flight_date
 ### Time Table for Planes
 ```
 SELECT flight_date, registration_number, manufacturer, model
-FROM pilot
+FROM plane
 INNER JOIN flight
 ON fk_plane_id = plane_id
 ORDER BY flight_date
