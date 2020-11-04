@@ -140,7 +140,7 @@ INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
 
 ## 3. Example Join Queries
 
-### Time Table for Pilots
+### 3.1 Time Table for Pilots
 ```
 SELECT flight_date, first_name, last_name
 FROM pilot
@@ -149,7 +149,7 @@ ON fk_pilot_id = pilot_id
 ORDER BY flight_date
 ```
 
-### Time Table for Planes
+### 3.2 Time Table for Planes
 ```
 SELECT flight_date, registration_number, manufacturer, model
 FROM plane
@@ -158,7 +158,7 @@ ON fk_plane_id = plane_id
 ORDER BY flight_date
 ```
 
-### Unused Planes
+### 3.3 Unused Planes
 ```
 SELECT flight_date, registration_number, manufacturer, model
 FROM plane
@@ -166,7 +166,7 @@ LEFT JOIN flight
 ON fk_plane_id = NULL
 ```
 
-### Departure Table
+### 3.4 Departure Table
 ```
 SELECT flight_date, registration_number, model, airport_name
 FROM plane as p
@@ -177,7 +177,7 @@ ON a1.airport_id = f.fk_origin_airport_id
 ORDER BY flight_date
 ```
 
-### Arrivals Table
+### 3.5 Arrivals Table
 ```
 SELECT flight_date, registration_number, model, airport_name
 FROM plane as p
