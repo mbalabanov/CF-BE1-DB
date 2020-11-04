@@ -1,10 +1,10 @@
 # CF-BE1-DB
 
-## 1. Airline Concept
+## 1. Airline DB Concept
 
 ![Airline Class Diagram](concept/airline-class-diagram.png)
 
-## 2 Airline Database
+## 2. Airline Database
 
 ```
 CREATE DATABASE airline DEFAULT CHARACTER SET utf8;
