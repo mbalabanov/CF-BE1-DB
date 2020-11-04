@@ -1,6 +1,6 @@
 # CF-BE1-DB
 
-## 1. Concept
+## 1. Airline Concept
 
 ![Airline Class Diagram](concept/airline-class-diagram.png)
 
