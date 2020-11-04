@@ -188,3 +188,16 @@ ON a1.airport_id = f.fk_destination_airport_id
 ORDER BY flight_date
 ```
 
+### 3.6 Departures and their Destinations
+```
+SELECT flight_date, registration_number, model, o.airport_name, d.airport_name
+FROM plane as p
+INNER JOIN flight AS f
+ON f.fk_plane_id = p.plane_id
+INNER JOIN airport as o
+ON f.fk_origin_airport_id = o.airport_id
+INNER JOIN airport AS d
+ON f.fk_destination_airport_id = d.airport_id
+ORDER BY flight_date
+```
+
