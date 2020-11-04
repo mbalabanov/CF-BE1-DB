@@ -98,17 +98,17 @@ INSERT INTO pilot VALUES (NULL, 'Miroslav', 'Detlef', 'Klose', 'First Officer');
 
 ```
 CREATE TABLE flight(
-  flight_id int NOT NULL AUTO_INCREMENT,
-  flight_date date,
-  fk_origin_airport_id INT,
-  fk_destination_airport_id INT,
-  fk_plane_id INT,
-  fk_pilot_id INT,
+	flight_id int NOT NULL AUTO_INCREMENT,
+	flight_date date,
+	fk_origin_airport_id INT,
+	fk_destination_airport_id INT,
+	fk_plane_id INT,
+	fk_pilot_id INT,
 	PRIMARY KEY (flight_id),
-  FOREIGN KEY (fk_origin_airport_id) REFERENCES airport(airport_id),
-  FOREIGN KEY (fk_destination_airport_id) REFERENCES airport(airport_id),
-  FOREIGN KEY (fk_plane_id) REFERENCES plane(plane_id),
-  FOREIGN KEY (fk_pilot_id) REFERENCES pilot(pilot_id)
+	FOREIGN KEY (fk_origin_airport_id) REFERENCES airport(airport_id),
+	FOREIGN KEY (fk_destination_airport_id) REFERENCES airport(airport_id),
+	FOREIGN KEY (fk_plane_id) REFERENCES plane(plane_id),
+	FOREIGN KEY (fk_pilot_id) REFERENCES pilot(pilot_id)
 );
 ```
 
