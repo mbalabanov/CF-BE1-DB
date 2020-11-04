@@ -138,7 +138,7 @@ INSERT INTO flight VALUES (NULL, '2020-12-12', 7, 5, 2, 10);
 INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
 ```
 
-## 3. Example Queries
+## 3. Example Join Queries
 
 ### Time Table for Pilots
 ```
