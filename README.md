@@ -140,8 +140,31 @@ INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
 
 ## 3. Example Queries
 
+### Time Table for Pilots
 ```
-SELECT * FROM flight WHERE flight_date = '2020-12-05';
-SELECT * FROM flight WHERE fk_plane_id = 2 ORDER BY flight_date ASC;
-SELECT flight_date, first_name, last_name FROM pilot INNER JOIN flight ON fk_pilot_id = pilot_id
+SELECT flight_date, first_name, last_name
+FROM pilot
+INNER JOIN flight
+ON fk_pilot_id = pilot_id
+ORDER BY flight_date
+```
+
+### Time Table for Planes
+```
+SELECT flight_date, registration_number, manufacturer, model
+FROM pilot
+INNER JOIN flight
+ON fk_plane_id = plane_id
+ORDER BY flight_date
+```
+
+### Full Flight Schedule
+```
+SELECT flight_date, registration_number, model, airport_name
+FROM plane as p
+INNER JOIN flight AS f
+ON f.fk_plane_id = p.plane_id
+INNER JOIN airport AS a1
+ON a1.airport_id = f.fk_origin_airport_id
+ORDER BY flight_date
 ```
