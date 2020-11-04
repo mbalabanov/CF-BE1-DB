@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-04T11:50:41.568Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Edg/86.0.622.58" etag="Xa3ZT52INmcjtrK7mw81" version="13.8.9-1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-04T13:59:37.815Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Edg/86.0.622.58" etag="7a2zqgjxuaENjIOTq1v2" version="13.8.9-1" type="github">
   <diagram id="jEI54FDsyi-h0m5cM9bC" name="Page-1">
-    <mxGraphModel dx="888" dy="665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="612" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,7 +34,7 @@
         <mxCell id="U9TCxv6QCCmvPE0OXd2a-33" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;fontStyle=1" parent="U9TCxv6QCCmvPE0OXd2a-32" vertex="1">
           <mxGeometry width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="U9TCxv6QCCmvPE0OXd2a-34" value="fk_origin_airport_id: string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontStyle=1" parent="U9TCxv6QCCmvPE0OXd2a-32" vertex="1">
+        <mxCell id="U9TCxv6QCCmvPE0OXd2a-34" value="fk_flight_service_id" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontStyle=1" parent="U9TCxv6QCCmvPE0OXd2a-32" vertex="1">
           <mxGeometry x="30" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="U9TCxv6QCCmvPE0OXd2a-91" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=#fff2cc;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#d6b656;" parent="U9TCxv6QCCmvPE0OXd2a-25" vertex="1">
