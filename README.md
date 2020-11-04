@@ -190,7 +190,7 @@ ORDER BY flight_date
 
 ### 3.6 Departures and their Destinations
 ```
-SELECT flight_date, registration_number, model, o.airport_name, d.airport_name
+SELECT flight_id, flight_date, registration_number, model, o.airport_name, d.airport_name
 FROM plane as p
 INNER JOIN flight AS f
 ON f.fk_plane_id = p.plane_id
