@@ -141,6 +141,7 @@ INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
 ## 3. Example Join Queries
 
 ### 3.1 Time Table for Pilots
+Use Case: Pilots want to see on which days they will be flying.
 ```
 SELECT flight_date, first_name, last_name
 FROM pilot
@@ -152,6 +153,7 @@ ORDER BY flight_date
 ![Pilot Time Table](db-airline/pilots.png)
 
 ### 3.2 Time Table for Planes
+Use Case: A manager wants to see on which days planes will be in use,
 ```
 SELECT flight_date, registration_number, manufacturer, model
 FROM plane
@@ -163,6 +165,7 @@ ORDER BY flight_date
 ![Scheduled Planes](db-airline/used-planes.png)
 
 ### 3.3 Unused Planes
+Use Case: A manager wants to see which planes are never used.
 ```
 SELECT flight_date, registration_number, manufacturer, model
 FROM plane
@@ -172,7 +175,8 @@ ON fk_plane_id = NULL
 #### Screenshot of Result
 ![Unused Planes](db-airline/unused-planes.png)
 
-### 3.4 Origins Table (for Arrivals)
+### 3.4 Origin Table (for Airport Arrivals Screen)
+Use Case: An Airport wants to show the flights arrving by their airport of origin.
 ```
 SELECT flight_date, registration_number, model, airport_name
 FROM plane as p
@@ -185,7 +189,8 @@ ORDER BY flight_date
 #### Screenshot of Result
 ![Origins Table (for Arrivals)](db-airline/arivals.png)
 
-### 3.5 Destinations Table (for Departures)
+### 3.5 Destination Table (for Airport Departures Screen)
+Use Case: An Airport wants to show the flights departing by their destination.
 ```
 SELECT flight_date, registration_number, model, airport_name
 FROM plane as p
@@ -199,6 +204,7 @@ ORDER BY flight_date
 ![Destinations Table (for Departures)](db-airline/departures.png)
 
 ### 3.6 Departures and their Destinations
+Use Case: A complete overview of the flights including their airport of origin and their destination airport.
 ```
 SELECT flight_id, flight_date, registration_number, model, o.airport_name AS 'Origin', d.airport_name AS 'Destination'
 FROM plane AS p
