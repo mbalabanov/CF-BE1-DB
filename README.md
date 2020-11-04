@@ -96,6 +96,7 @@ INSERT INTO pilot VALUES (NULL, 'Miroslav', 'Detlef', 'Klose', 'First Officer');
 
 ### Flight Table
 
+```
 CREATE TABLE flight(
   flight_id int NOT NULL AUTO_INCREMENT,
   flight_date date,
@@ -109,4 +110,28 @@ CREATE TABLE flight(
   FOREIGN KEY (fk_plane_id) REFERENCES plane(plane_id),
   FOREIGN KEY (fk_pilot_id) REFERENCES pilot(pilot_id)
 );
+```
 
+#### Flight Inserts
+```
+INSERT INTO flight VALUES (NULL, '2020-11-24', 1, 2, 3, 4);
+INSERT INTO flight VALUES (NULL, '2020-11-25', 2, 1, 1, 2);
+INSERT INTO flight VALUES (NULL, '2020-11-26', 3, 2, 2, 3);
+INSERT INTO flight VALUES (NULL, '2020-11-27', 4, 3, 3, 5);
+INSERT INTO flight VALUES (NULL, '2020-11-28', 4, 3, 3, 5);
+INSERT INTO flight VALUES (NULL, '2020-11-29', 10, 9, 4, 7);
+INSERT INTO flight VALUES (NULL, '2020-11-30', 12, 5, 5, 5);
+INSERT INTO flight VALUES (NULL, '2020-12-01', 7, 10, 6, 6);
+INSERT INTO flight VALUES (NULL, '2020-12-02', 8, 3, 3, 5);
+INSERT INTO flight VALUES (NULL, '2020-12-03', 9, 5, 4, 1);
+INSERT INTO flight VALUES (NULL, '2020-12-04', 6, 11, 5, 2);
+INSERT INTO flight VALUES (NULL, '2020-12-05', 12, 12, 6, 3);
+INSERT INTO flight VALUES (NULL, '2020-12-06', 11, 11, 2, 4);
+INSERT INTO flight VALUES (NULL, '2020-12-07', 5, 10, 3, 5);
+INSERT INTO flight VALUES (NULL, '2020-12-08', 12, 9, 4, 6);
+INSERT INTO flight VALUES (NULL, '2020-12-09', 11, 8, 5, 7);
+INSERT INTO flight VALUES (NULL, '2020-12-10', 9, 7, 6, 8);
+INSERT INTO flight VALUES (NULL, '2020-12-11', 8, 6, 1, 9);
+INSERT INTO flight VALUES (NULL, '2020-12-12', 7, 5, 2, 10);
+INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
+```
