@@ -158,7 +158,7 @@ ON fk_plane_id = plane_id
 ORDER BY flight_date
 ```
 
-### Full Flight Schedule
+### Departure Table
 ```
 SELECT flight_date, registration_number, model, airport_name
 FROM plane as p
