@@ -1,14 +1,16 @@
 # CF-BE1-DB
 
-SQL Queries uased to create Airline DB:
+## 1. Concept
 
-## Airline Database
+![Airline Class Diagram](concept/airline-class-diagram.png)
+
+## 2 Airline Database
 
 ```
 CREATE DATABASE airline DEFAULT CHARACTER SET utf8;
 ```
 
-### Plane Table
+### 2.1 Plane Table
 
 ```
 CREATE TABLE plane(
@@ -22,7 +24,7 @@ CREATE TABLE plane(
 );
 ```
 
-#### Plane Inserts
+#### 2.1.1 Plane Inserts
 ```
 INSERT INTO plane VALUES (NULL, 'N1012', 'Airbus Corporate Jets', 'A330', 440, 11750);
 INSERT INTO plane VALUES (NULL, 'N1007', 'Boeing Business Jets', '767', 375, 7130);
@@ -34,7 +36,7 @@ INSERT INTO plane VALUES (NULL, 'N1037', 'Embraer-Empresa Brasileira DR AeronÁu
 INSERT INTO plane VALUES (NULL, 'N1098', 'Bombardier Aerospace', 'CRJ900', 104, 2830);
 ```
 
-### Airport Table
+### 2.2 Airport Table
 
 ```
 CREATE TABLE airport(
@@ -47,7 +49,7 @@ CREATE TABLE airport(
 );
 ```
 
-#### Airport Inserts
+#### 2.2.1 Airport Inserts
 ```
 INSERT INTO airport VALUES (NULL, 'ATL/KATL', 'Hartsfield–Jackson Atlanta International Airport', 'Atlanta, Georgia', 'United States');
 INSERT INTO airport VALUES (NULL, 'PEK/ZBAA', 'Beijing Capital International Airport', 'Chaoyang-Shunyi, Beijing', 'China');
@@ -64,7 +66,7 @@ INSERT INTO airport VALUES (NULL, 'AMS/EHAM', 'Amsterdam Airport Schiphol', 'Haa
 INSERT INTO airport VALUES (NULL, 'HKG/VHHH', 'Hong Kong International Airport', 'Chek Lap Kok, Islands, New Territories', 'Hong Kong SAR, China');
 ```
 
-### Pilot Table
+### 2.3 Pilot Table
 
 ```
 CREATE TABLE pilot(
@@ -77,7 +79,7 @@ CREATE TABLE pilot(
 );
 ```
 
-#### Pilot Inserts
+#### 2.3.1 Pilot Inserts
 ```
 INSERT INTO pilot VALUES (NULL, 'Danny', 'Detlef', 'Röhl', 'Captain');
 INSERT INTO pilot VALUES (NULL, 'Toni', 'Detlef', 'Tapalović', 'First Officer');
@@ -94,15 +96,15 @@ INSERT INTO pilot VALUES (NULL, 'Hansi', 'Detlef', 'Flick', 'Captain');
 INSERT INTO pilot VALUES (NULL, 'Miroslav', 'Detlef', 'Klose', 'First Officer');
 ```
 
-### Flight Table
+### 2.4 Flight Table
 
 ```
 CREATE TABLE flight(
 	flight_id int NOT NULL AUTO_INCREMENT,
 	flight_date DATE NOT NULL,
-	fk_origin_airport_id INT,
-	fk_destination_airport_id INT,
-	fk_plane_id INT,
+	fk_origin_airport_id INT NOT NULL,
+	fk_destination_airport_id INT NOT NULL,
+	fk_plane_id INT NOT NULL,
 	fk_pilot_id INT,
 	PRIMARY KEY (flight_id),
 	FOREIGN KEY (fk_origin_airport_id) REFERENCES airport(airport_id),
@@ -112,7 +114,7 @@ CREATE TABLE flight(
 );
 ```
 
-#### Flight Inserts
+#### 2.4.1 Flight Inserts
 ```
 INSERT INTO flight VALUES (NULL, '2020-11-24', 1, 2, 3, 4);
 INSERT INTO flight VALUES (NULL, '2020-11-25', 2, 1, 1, 2);
@@ -136,7 +138,7 @@ INSERT INTO flight VALUES (NULL, '2020-12-12', 7, 5, 2, 10);
 INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
 ```
 
-## Example Queries
+## 3. Example Queries
 
 ```
 SELECT * FROM `flight` WHERE flight_date = '2020-12-05';
