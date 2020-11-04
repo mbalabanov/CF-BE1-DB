@@ -158,6 +158,14 @@ ON fk_plane_id = plane_id
 ORDER BY flight_date
 ```
 
+### Unused Planes
+```
+SELECT flight_date, registration_number, manufacturer, model
+FROM plane
+LEFT JOIN flight
+ON fk_plane_id = NULL
+```
+
 ### Departure Table
 ```
 SELECT flight_date, registration_number, model, airport_name
@@ -179,3 +187,4 @@ INNER JOIN airport AS a1
 ON a1.airport_id = f.fk_destination_airport_id
 ORDER BY flight_date
 ```
+
