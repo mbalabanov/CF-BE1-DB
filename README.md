@@ -13,7 +13,7 @@ CREATE DATABASE airline DEFAULT CHARACTER SET utf8;
 ```
 CREATE TABLE plane(
 	plane_id int NOT NULL AUTO_INCREMENT,
-	registration_number VARCHAR(55),
+	registration_number VARCHAR(55) NOT NULL,
 	manufacturer VARCHAR(55),
 	model VARCHAR(55),
 	maximum_capacity int,
@@ -39,7 +39,7 @@ INSERT INTO plane VALUES (NULL, 'N1098', 'Bombardier Aerospace', 'CRJ900', 104, 
 ```
 CREATE TABLE airport(
 	airport_id int NOT NULL AUTO_INCREMENT,
-	identifier VARCHAR(55),
+	identifier VARCHAR(55) NOT NULL,
 	airport_name VARCHAR(100),
 	city_name VARCHAR(100),
 	country_name VARCHAR(100),
@@ -71,7 +71,7 @@ CREATE TABLE pilot(
 	pilot_id int NOT NULL AUTO_INCREMENT,
 	first_name VARCHAR(100),
 	middle_name VARCHAR(100),
-	last_name VARCHAR(100),
+	last_name VARCHAR(100) NOT NULL,
 	rank VARCHAR(100),
 	PRIMARY KEY (pilot_id)
 );
@@ -99,7 +99,7 @@ INSERT INTO pilot VALUES (NULL, 'Miroslav', 'Detlef', 'Klose', 'First Officer');
 ```
 CREATE TABLE flight(
 	flight_id int NOT NULL AUTO_INCREMENT,
-	flight_date date,
+	flight_date DATE NOT NULL,
 	fk_origin_airport_id INT,
 	fk_destination_airport_id INT,
 	fk_plane_id INT,
@@ -134,4 +134,11 @@ INSERT INTO flight VALUES (NULL, '2020-12-10', 9, 7, 6, 8);
 INSERT INTO flight VALUES (NULL, '2020-12-11', 8, 6, 1, 9);
 INSERT INTO flight VALUES (NULL, '2020-12-12', 7, 5, 2, 10);
 INSERT INTO flight VALUES (NULL, '2020-12-13', 6, 4, 3, 11);
+```
+
+## Example Queries
+
+```
+SELECT * FROM `flight` WHERE flight_date = '2020-12-05';
+SELECT * FROM `flight` WHERE fk_plane_id = 2 ORDER BY flight_date ASC;
 ```
